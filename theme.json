@@ -45,7 +45,7 @@
 				{ "name": "Medium",   "slug": "medium",   "size": "clamp(1rem, 3vw, 1.25rem)" },
 				{ "name": "Large",    "slug": "large",    "size": "clamp(1.333rem, 4vw, 1.75rem)" },
 				{ "name": "X-large",  "slug": "x-large",  "size": "clamp(2rem, 4vw, 2.5rem)" },
-				{ "name": "XX Large", "slug": "xx-large", "size": "clamp(2.5rem, 6vw, 3.5rem)" }
+				{ "name": "XX Large", "slug": "xx-large", "size": "clamp(2.5rem, 6vw, 4rem)" }
 			],
 			"customFontSize": false,
             "lineHeight": true,
@@ -64,7 +64,7 @@
 		},
 		"layout": {
 			"contentSize": "40rem",
-			"wideSize": "52rem"
+			"wideSize": "60rem"
 		},
 		"spacing": {
 			"blockGap": true,
@@ -82,8 +82,8 @@
 		"custom": {
 			"typography": {
 				"line-height": {
-					"small": 1.1,
-					"normal": 1.5
+					"heading": 0.8125,
+					"body": 1.5
 				}
 			},
 			"borderRadius": {
@@ -94,7 +94,7 @@
 				"bannerHeight": "clamp(12rem, 20vw, 16rem)"
 			},
 			"layout": {
-				"fullSize": "72rem"
+				"fullSize": "80rem"
 			}
 		}
 	},
@@ -105,7 +105,7 @@
 		},
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--ubuntu)",
-			"lineHeight": "var(--wp--custom--typography--line-height--normal)",
+			"lineHeight": "var(--wp--custom--typography--line-height--body)",
 			"fontSize":   "var(--wp--preset--font-size--medium)"
 		},
 		"spacing": {
@@ -162,7 +162,7 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--caveat)",
 					"fontWeight": "400",
-					"lineHeight": "var(--wp--custom--typography--line-height--small)"
+					"lineHeight": "var(--wp--custom--typography--line-height--heading)"
 				},
 				"color": {
 				}
