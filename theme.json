@@ -94,7 +94,7 @@
 				"bannerHeight": "clamp(12rem, 20vw, 16rem)"
 			},
 			"layout": {
-				"fullSize": "80rem"
+				"fullSize": "84rem"
 			}
 		}
 	},
