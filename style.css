@@ -93,10 +93,18 @@ html {
 }
 
 .wp-site-blocks > .wp-block-cover > .wp-block-cover__inner-container {
+	border: 4px solid var(--wp--preset--color--contrast);
+	border-radius: 10px;
+	padding-top: var(--wp--style--root--padding-top);
+	padding-bottom: var(--wp--style--root--padding-bottom);
+	padding-right: var(--wp--style--root--padding-right);
+	padding-left: var(--wp--style--root--padding-left);	
+
 	max-width: var(--wp--custom--layout--full-size);
 	margin-left: auto;
 	margin-right: auto;
 	position: relative; /* For site navigation */
+	box-sizing: border-box;
 }
 
 
@@ -118,15 +126,15 @@ header .wp-block-navigation {
 
 header .wp-block-navigation__responsive-container.is-menu-open {
 	background-color: transparent !important;
-	padding-top: var(--wp--style--root--padding-top);
+	/* padding-top: var(--wp--style--root--padding-top);
 	padding-bottom: var(--wp--style--root--padding-bottom);
 	padding-right: var(--wp--style--root--padding-right);
-	padding-left: var(--wp--style--root--padding-left);	
+	padding-left: var(--wp--style--root--padding-left);	 */
 	
-/* 	box-sizing: border-box;
+	box-sizing: border-box;
 	display: block;
 	position: absolute;
-	overflow: visible; */
+	overflow: visible;
 }
 
 header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-close {
@@ -144,15 +152,21 @@ header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigat
 }
 
 header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
-
+	float: right;
+	position: static;
+	padding-bottom: var(--wp--preset--spacing--60);
 }
 
 header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
-	padding-top: 0;
+	padding-top: calc( var(--wp--preset--spacing--60) + 15vh) ;
 	width: 100%;
-	height: 100%;
-	flex-direction: row;
-	justify-content: center;
+	/* flex-direction: row;
+	justify-content: center; */
+}
+
+header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+	text-align: center;
+	display: block;
 }
 
 /* Menu icon */
@@ -179,6 +193,14 @@ header .wp-block-navigation-link > a {
 
 header .wp-block-navigation-link:hover > a {
 	text-decoration: underline;
+}
+
+/**
+ * Footer
+ */
+footer.wp-block-template-part {
+	position: relative;
+	z-index: 100001;
 }
 
 
@@ -230,10 +252,27 @@ header .wp-block-navigation-link:hover > a {
 	
 }
 
+/* Breakpoint for small screens */
+@media screen and (max-width: 719px) {
+	
+	.wp-site-blocks > .wp-block-cover {
+		padding-top: var(--wp--preset--spacing--30);
+		padding-bottom: var(--wp--preset--spacing--30);
+		padding-right: var(--wp--preset--spacing--30);
+		padding-left: var(--wp--preset--spacing--30);
+	}
+
+}
+
 /* Breakpoint for tiny screens */
-@media screen and (max-width: 480px) {
-	
-	
+@media screen and (max-width: 479px) {
+
+	.wp-site-blocks > .wp-block-cover > .wp-block-cover__inner-container {
+		padding-top: var(--wp--preset--spacing--50);
+		padding-bottom: var(--wp--preset--spacing--50);
+		padding-right: var(--wp--preset--spacing--50);
+		padding-left: var(--wp--preset--spacing--50);
+	}
 
 }
 
@@ -241,7 +280,13 @@ header .wp-block-navigation-link:hover > a {
 
 /* --------------------------------- STATES --------------------------------- */
 
-/* Site navigation is open */
+/**
+ * When site navigation is open 
+ */
+html.has-modal-open {
+	overflow: visible;
+}
+
 html.has-modal-open main,
 html.has-modal-open header .wp-block-navigation__responsive-container-open {
 	visibility: hidden;
