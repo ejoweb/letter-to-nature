@@ -207,6 +207,22 @@ footer.wp-block-template-part {
 /* ----------------------------- CUSTOM CLASSES ----------------------------- */
 
 
+/** 
+ * Lightweight Accordion 
+ */
+
+.lightweight-accordion .lightweight-accordion-title {
+	display: list-item;
+	cursor: pointer;
+}
+
+.lightweight-accordion .lightweight-accordion-title p,
+.lightweight-accordion .lightweight-accordion-title span,
+.lightweight-accordion .lightweight-accordion-title h1,
+.lightweight-accordion .lightweight-accordion-title h2,
+.lightweight-accordion .lightweight-accordion-title h3 {
+	display: inline;
+}
 
 /* ------------------------------ BREAKPOINTS ------------------------------- */
 

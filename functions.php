@@ -32,6 +32,11 @@ add_action( 'after_setup_theme', function() {
 
 	// Use default featured image on special pages
 	// add_filter( 'post_thumbnail_html', 'ejo_show_default_image_on_special_pages', 21, 5 );
+
+	/**
+	 * Lightweight accordion
+	 */
+	add_filter('lightweight_accordion_include_frontend_stylesheet', '__return_false' );
 	
 } );
 
