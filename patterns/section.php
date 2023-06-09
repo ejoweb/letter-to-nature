@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Sectie - Standaard
- * Slug: ejo/section
+ * Slug: ltn/section
  * Categories: featured
  */
 ?>

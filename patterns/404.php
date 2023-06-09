@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: 404
- * Slug: ejo/404
+ * Slug: ltn/404
  * Categories: hidden
  * Inserter: no
  */

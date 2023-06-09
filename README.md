@@ -1,11 +1,11 @@
-# Ejoweb WordPress theme
-WordPress blocktheme tailormade for Ejoweb. 
+# Letter to Nature WordPress theme
+WordPress blocktheme tailormade for Letter to Nature. 
 
-Code and design by Erik @ [Ejoweb](https://ejoweb.nl) in the Netherlands (<info@ejoweb.nl>).
+Code and design by Erik @ [Letter to Nature](https://ltnweb.nl) in the Netherlands (<info@ltnweb.nl>).
 
 ## Development
 
-For documented code changes see [CHANGELOG.md](./CHANGELOG.md) and [git commitlog](https://github.com/ejoweb/tinytheme-ejoweb/commits/main).
+For documented code changes see [CHANGELOG.md](./CHANGELOG.md) and [git commitlog](https://github.com/ltnweb/letter-to-nature/commits/main).
 
 ### Fonts
 

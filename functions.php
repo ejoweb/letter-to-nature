@@ -1,6 +1,6 @@
 <?php
 /**
- * Ejoweb functions and definitions
+ * Letter to Nature functions and definitions
  */
 
 /* ### HOOK IT UP ########################################################## */
@@ -19,19 +19,19 @@ add_action( 'after_setup_theme', function() {
 	add_editor_style( 'style.css' );
 
 	// Enqueue scripts and styles to frontend
-	add_action( 'wp_enqueue_scripts', 'ejo_add_frontend_styles_and_scripts' );
+	add_action( 'wp_enqueue_scripts', 'ltn_add_frontend_styles_and_scripts' );
 
 	// Enqueue scripts and styles to the editor
-	add_action( 'enqueue_block_editor_assets', 'ejo_add_editor_styles_and_scripts' );
+	add_action( 'enqueue_block_editor_assets', 'ltn_add_editor_styles_and_scripts' );
 
 	// Add class to submit button for contact form 7
-	add_filter( 'do_shortcode_tag', 'ejo_wpcf7_add_submit_button_class', 10, 4 );
+	add_filter( 'do_shortcode_tag', 'ltn_wpcf7_add_submit_button_class', 10, 4 );
 
 	// Limit excerpt length
 	add_filter( 'excerpt_length', function($length) { return 32; } );
 
 	// Use default featured image on special pages
-	// add_filter( 'post_thumbnail_html', 'ejo_show_default_image_on_special_pages', 21, 5 );
+	// add_filter( 'post_thumbnail_html', 'ltn_show_default_image_on_special_pages', 21, 5 );
 
 	/**
 	 * Lightweight accordion
@@ -48,7 +48,7 @@ add_action( 'after_setup_theme', function() {
  *
  * @return void
  */
-function ejo_add_frontend_styles_and_scripts() {
+function ltn_add_frontend_styles_and_scripts() {
 
 	// Get theme version (for cachebusting)
 	$theme_version = wp_get_theme()->get( 'Version' );
@@ -56,18 +56,18 @@ function ejo_add_frontend_styles_and_scripts() {
 
 	// Register theme stylesheet.
 	wp_register_style(
-		'ejo-style',
+		'ltn-style',
 		get_template_directory_uri() . '/style.css',
 		array(),
 		$version_string
 	);
 
 	// Enqueue theme stylesheet
-	wp_enqueue_style( 'ejo-style' );
+	wp_enqueue_style( 'ltn-style' );
 
 	// Register theme script	
 	wp_register_script( 
-		'ejo-script-for-frontend',
+		'ltn-script-for-frontend',
         get_template_directory_uri() .'/assets/js/script-for-frontend.js', 
 		array(),
 		false, 
@@ -75,34 +75,34 @@ function ejo_add_frontend_styles_and_scripts() {
 	);
 
 	// Enqueue theme script
-	wp_enqueue_script( 'ejo-script-for-frontend' );
+	wp_enqueue_script( 'ltn-script-for-frontend' );
 }
 
 
 /**
  * Add scripts and styles (editor)
  */
-function ejo_add_editor_styles_and_scripts() {
+function ltn_add_editor_styles_and_scripts() {
 
 	// Register theme stylesheet.
 	$theme_version = wp_get_theme()->get( 'Version' );
 
 	$version_string = is_string( $theme_version ) ? $theme_version : false;
 	wp_register_style(
-		'ejo-style-for-editor',
+		'ltn-style-for-editor',
 		get_template_directory_uri() . '/assets/css/style-for-editor.css',
 		array(),
 		$version_string
 	);
 
 	// Enqueue theme stylesheet.
-	wp_enqueue_style( 'ejo-style-for-editor' );
+	wp_enqueue_style( 'ltn-style-for-editor' );
 }
 
 /**
  * Contact form 7 - add class to submit button
  */
-function ejo_wpcf7_add_submit_button_class($output, $tag, $atts, $m) {
+function ltn_wpcf7_add_submit_button_class($output, $tag, $atts, $m) {
 
     if ($tag === 'contact-form-7') {
         $output = str_replace(
@@ -119,7 +119,7 @@ function ejo_wpcf7_add_submit_button_class($output, $tag, $atts, $m) {
 /**
  * Show default featured image on special pages like post-archive and 404
  */
-function ejo_show_default_image_on_special_pages( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+function ltn_show_default_image_on_special_pages( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
 
 	error_log('testttt');
 
