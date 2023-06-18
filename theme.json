@@ -43,9 +43,9 @@
 			"fontSizes": [
 				{ "name": "Small",    "slug": "small",    "size": "clamp(0.875rem, 4vw, 1rem)" },
 				{ "name": "Medium",   "slug": "medium",   "size": "clamp(1rem, 3vw, 1.25rem)" },
-				{ "name": "Large",    "slug": "large",    "size": "clamp(1.333rem, 4vw, 1.75rem)" },
-				{ "name": "X-large",  "slug": "x-large",  "size": "clamp(2rem, 4vw, 2.5rem)" },
-				{ "name": "XX Large", "slug": "xx-large", "size": "clamp(2.5rem, 6vw, 4rem)" }
+				{ "name": "Large",    "slug": "large",    "size": "clamp(1.333rem, 4vw, 1.5rem)" },
+				{ "name": "X-large",  "slug": "x-large",  "size": "clamp(2rem, 4vw, 2.125rem)" },
+				{ "name": "XX-large",  "slug": "xx-large",  "size": "clamp(2.25rem, 5vw, 2.75rem)" }
 			],
 			"customFontSize": false,
             "lineHeight": true,
@@ -64,7 +64,7 @@
 		},
 		"layout": {
 			"contentSize": "40rem",
-			"wideSize": "60rem"
+			"wideSize": "40rem"
 		},
 		"spacing": {
 			"blockGap": true,
@@ -82,7 +82,8 @@
 		"custom": {
 			"typography": {
 				"line-height": {
-					"heading": 0.8125,
+					"heading": 1.1,
+					"caveat": 0.8125,
 					"body": 1.5
 				}
 			},
@@ -91,10 +92,13 @@
 				"medium": "10px"
 			},
 			"spacing": {
-				"bannerHeight": "clamp(12rem, 20vw, 16rem)"
+				"containerPadding": {
+					"horizontal": "4.5rem",
+					"vertical": "4rem"
+				}
 			},
 			"layout": {
-				"fullSize": "81rem"
+				"fullSize": "60rem"
 			}
 		}
 	},
@@ -112,9 +116,9 @@
 			"blockGap": "var(--wp--preset--spacing--50)",
 			"padding": {
 				"top": "var(--wp--preset--spacing--60)",
-				"right": "var(--wp--preset--spacing--70)",
+				"right": "var(--wp--preset--spacing--60)",
 				"bottom": "var(--wp--preset--spacing--60)",
-				"left": "var(--wp--preset--spacing--70)"
+				"left": "var(--wp--preset--spacing--60)"
 			}
 		},
 		"elements": {
@@ -160,8 +164,8 @@
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--caveat)",
-					"fontWeight": "400",
+					"fontFamily": "var(--wp--preset--font-family--ubuntu)",
+					"fontWeight": "700",
 					"lineHeight": "var(--wp--custom--typography--line-height--heading)"
 				},
 				"color": {
@@ -170,6 +174,11 @@
 			"h1": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--xx-large)"
+				},
+				"spacing": {
+					"padding": {
+						"bottom": "0.5rem"
+					}
 				}
 			},
 			"h2": {
