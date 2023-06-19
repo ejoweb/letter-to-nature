@@ -42,10 +42,11 @@ html {
  * Heading
  */
 h1 > span {
+	display: block;
 	font-family: var(--wp--preset--font-family--caveat);
-	line-height: var(--wp--custom--typography--line-height--caveat);
 	font-weight: 400;
-	font-size: 0.9em;
+	line-height: 0.9;
+	/* font-size: 0.9em; */
 }
 
 /**
@@ -123,19 +124,24 @@ h1 > span {
 	align-items: flex-start;
 }
 
-.wp-site-blocks > .wp-block-cover > .wp-block-cover__inner-container {
-	border: 4px solid var(--wp--preset--color--contrast);
-	border-radius: 10px;
-	padding-top: var(--wp--custom--spacing--container-padding--vertical);
-	padding-bottom: var(--wp--custom--spacing--container-padding--vertical);
-	padding-right: var(--wp--custom--spacing--container-padding--horizontal);
-	padding-left: var(--wp--custom--spacing--container-padding--horizontal);	
 
+.wp-site-blocks > .wp-block-cover > .wp-block-cover__inner-container > header,
+.wp-site-blocks > .wp-block-cover > .wp-block-cover__inner-container > main,
+.wp-site-blocks > .wp-block-cover > .wp-block-cover__inner-container > footer {
 	max-width: var(--wp--custom--layout--full-size);
 	margin-left: auto;
 	margin-right: auto;
 	position: relative; /* For site navigation */
 	box-sizing: border-box;
+}
+
+.wp-site-blocks > .wp-block-cover > .wp-block-cover__inner-container > main {
+	border: 4px solid var(--wp--preset--color--contrast);
+	border-radius: 10px;
+	padding-top: var(--wp--custom--spacing--container-padding--top);
+	padding-right: var(--wp--custom--spacing--container-padding--right);
+	padding-bottom: var(--wp--custom--spacing--container-padding--bottom);
+	padding-left: var(--wp--custom--spacing--container-padding--left);	
 }
 
 
