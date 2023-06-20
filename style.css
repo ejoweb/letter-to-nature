@@ -108,6 +108,13 @@ h1 > em {
 	border-radius: 4px;
 }
 
+/**
+ * Image block
+ */
+.wp-block-image img {
+	box-shadow: 0.5rem 0.5rem 0 rgba(255,255,255,0.4);
+}
+
 
 
 /* -------------------------------- LAYOUT -------------------------------- */
@@ -277,7 +284,8 @@ header .wp-block-navigation-item__label > em {
 	/* position: absolute; */
 	font-size: 1.125em;
 	width: max-content;
-	margin-top: -0.6875em;
+	/* margin-top: -0.6875em; */
+	margin-top: -0.5em;
 }
 
 
