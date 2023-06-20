@@ -133,8 +133,8 @@ h1 > em {
 	max-width: 1920px;
 	margin-left: auto;
 	margin-right: auto;
-	align-items: flex-start;
 	min-height: 100vh;
+	align-items: stretch;
 }
 
 .wp-site-blocks > .wp-block-cover > .wp-block-cover__inner-container {
@@ -153,12 +153,10 @@ h1 > em {
 
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
 }
 
-.wp-site-blocks > .wp-block-cover > .wp-block-cover__inner-container > header,
-.wp-site-blocks > .wp-block-cover > .wp-block-cover__inner-container > footer {
-	flex-grow: 0;
+.wp-site-blocks > .wp-block-cover > .wp-block-cover__inner-container > main {
+	flex-grow: 1;
 }
 
 
