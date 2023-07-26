@@ -9,8 +9,9 @@
 			"text": true,
 			"link": true,
 			"palette": [
-				{ "name": "Base", 	    "slug": "base", 	  "color": "#F4FAED" },
-				{ "name": "Contrast", 	"slug": "contrast",   "color": "#5E692F" }
+				{ "name": "Base", 	    "slug": "base", 	  "color": "#FFFFFF" },
+				{ "name": "Base Alt", 	"slug": "base-x",     "color": "#F5F6F3" },
+				{ "name": "Contrast", 	"slug": "contrast",   "color": "#333333" }
 			],
 			"custom": true,
 			"gradients": [],
@@ -21,8 +22,13 @@
 		"typography": {
 			"fontFamilies": [
 				{
-					"name": "Caveat",
-					"slug": "caveat",
+					"name": "Base",
+					"slug": "base",
+					"fontFamily": "Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif"
+				},
+				{
+					"name": "Handwriting",
+					"slug": "handwriting",
 					"fontFamily": "\"Caveat\",ui-serif, Georgia, serif",
 					"fontFace": [
 						{
@@ -33,19 +39,14 @@
 							"src": [ "file:./assets/fonts/caveat/caveat-v17-latin-regular.woff2" ]
 						}
 					]
-				},
-				{
-					"name": "Ubuntu",
-					"slug": "ubuntu",
-					"fontFamily": "Ubuntu,system-ui,\"Segoe UI\",Roboto,Oxygen-Sans,Cantarell,\"Helvetica Neue\",sans-serif"
 				}
 			],
 			"fontSizes": [
 				{ "name": "Small",    "slug": "small",    "size": "clamp(0.875rem, 4vw, 1rem)" },
-				{ "name": "Medium",   "slug": "medium",   "size": "clamp(1rem, 3vw, 1.25rem)" },
+				{ "name": "Medium",   "slug": "medium",   "size": "clamp(1rem, 3vw, 1.5rem)" },
 				{ "name": "Large",    "slug": "large",    "size": "clamp(1.333rem, 4vw, 1.5rem)" },
-				{ "name": "X-large",  "slug": "x-large",  "size": "clamp(2rem, 4vw, 2.125rem)" },
-				{ "name": "XX-large",  "slug": "xx-large",  "size": "clamp(2.25rem, 5vw, 2.75rem)" }
+				{ "name": "X-large",  "slug": "x-large",  "size": "clamp(2rem, 4vw, 2.25rem)" },
+				{ "name": "XX-large",  "slug": "xx-large",  "size": "clamp(2.5rem, 5vw, 3.25rem)" }
 			],
 			"customFontSize": false,
             "lineHeight": true,
@@ -64,7 +65,7 @@
 		},
 		"layout": {
 			"contentSize": "40rem",
-			"wideSize": "40rem"
+			"wideSize": "50rem"
 		},
 		"spacing": {
 			"blockGap": true,
@@ -82,9 +83,9 @@
 		"custom": {
 			"typography": {
 				"line-height": {
-					"heading": 1.1,
-					"caveat": 0.8125,
-					"body": 1.5
+					"heading": 1,
+					"handwriting": 0.8125,
+					"base": 1.3333
 				}
 			},
 			"borderRadius": {
@@ -93,12 +94,12 @@
 			},
 			"spacing": {
 				"containerPadding": {
-					"horizontal": "4.5rem",
-					"vertical": "4rem"
+					"horizontal": "var(--wp--preset--spacing--60)",
+					"vertical": "var(--wp--preset--spacing--60)"
 				}
 			},
 			"layout": {
-				"fullSize": "60rem"
+				"fullSize": "75rem"
 			}
 		}
 	},
@@ -108,16 +109,17 @@
 			"text": 	  "var(--wp--preset--color--contrast)"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--ubuntu)",
-			"lineHeight": "var(--wp--custom--typography--line-height--body)",
-			"fontSize":   "var(--wp--preset--font-size--medium)"
+			"fontFamily": "var(--wp--preset--font-family--base)",
+			"lineHeight": "var(--wp--custom--typography--line-height--base)",
+			"fontSize":   "var(--wp--preset--font-size--medium)",
+			"fontWeight":   "300"
 		},
 		"spacing": {
 			"blockGap": "var(--wp--preset--spacing--50)",
 			"padding": {
-				"top": "var(--wp--preset--spacing--60)",
+				"top": "var(--wp--preset--spacing--50)",
 				"right": "var(--wp--preset--spacing--60)",
-				"bottom": "var(--wp--preset--spacing--60)",
+				"bottom": "var(--wp--preset--spacing--50)",
 				"left": "var(--wp--preset--spacing--60)"
 			}
 		},
@@ -164,7 +166,7 @@
 			},
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--ubuntu)",
+					"fontFamily": "var(--wp--preset--font-family--base)",
 					"fontWeight": "700",
 					"lineHeight": "var(--wp--custom--typography--line-height--heading)"
 				},
@@ -177,7 +179,7 @@
 				},
 				"spacing": {
 					"padding": {
-						"bottom": "0.5rem"
+						"bottom": "0"
 					}
 				}
 			},
@@ -235,7 +237,11 @@
 				}
 			},
 			"core/column": {
-				"border": {
+				"spacing": {
+					"padding": {
+						"left": "0",
+						"right": "0"
+					}
 				}
 			},
 			"core/post-featured-image": {
@@ -270,13 +276,6 @@
 				"page"
 			],
 			"title": "404"
-		},
-		{
-			"name": "landingspage",
-			"postTypes": [
-				"page"
-			],
-			"title": "Landingspagina"
 		}
 	],
 	"templateParts": [
