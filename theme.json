@@ -9,8 +9,8 @@
 			"text": true,
 			"link": true,
 			"palette": [
-				{ "name": "Base", 	    "slug": "base", 	  "color": "#258C95" },
-				{ "name": "Contrast", 	"slug": "contrast",   "color": "#FFFFFF" }
+				{ "name": "Base", 	    "slug": "base", 	  "color": "#F4FAED" },
+				{ "name": "Contrast", 	"slug": "contrast",   "color": "#5E692F" }
 			],
 			"custom": true,
 			"gradients": [],
