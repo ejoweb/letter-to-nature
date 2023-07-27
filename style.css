@@ -39,6 +39,13 @@ html {
 }
 
 /**
+ * Copywriting
+ */
+strong, b {
+	font-weight: bold;
+}
+
+/**
  * Links
  */
 a:hover {
@@ -60,6 +67,21 @@ h1 > em {
 	line-height: 0.9;
 	font-size: 0.9125em;
 }
+
+/** 
+ * List 
+ */
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+ul li {
+	border-bottom: 3px solid var(--wp--preset--color--base-x);
+	padding-bottom: 0.25em;
+	margin-bottom: 0.25em;
+}
+
 
 /**
  * Site title block
@@ -109,13 +131,32 @@ h1 > em {
 }
 
 /**
+ * Table block
+ */
+.wp-block-table {
+	margin-block-start: var(--wp--preset--spacing--50);
+}
+
+.wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) {
+	background-color: var(--wp--preset--color--base-x);
+}
+
+.wp-block-table td, .wp-block-table th {
+	border-color: var(--wp--preset--color--base-x);
+	border-width: 0;
+}
+
+.wp-block-table td:first-child {
+	padding-left: 0;
+	vertical-align: top;
+}
+
+/**
  * Image block
  */
 .wp-block-image img {
 	box-shadow: 0.5rem 0.5rem 0 rgba(255,255,255,0.4);
 }
-
-
 
 
 
@@ -144,6 +185,9 @@ h1 > em {
 	margin-right: auto;
 	min-height: 100vh;
 	align-items: center;
+
+	/* TMP */
+	padding: 0;
 }
 
 .wp-site-blocks > .wp-block-cover > .wp-block-cover__inner-container {
@@ -296,7 +340,8 @@ main .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alig
  	margin-left: calc(var(--wp--style--global--wide-size) - var(--wp--style--global--content-size)) !important;
 }
 
-main .alignfull {
+main * + .alignfull,
+main .alignfull + * {
 	margin-block-start: var(--wp--preset--spacing--60);
 }
 
