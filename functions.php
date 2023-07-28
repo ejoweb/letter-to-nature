@@ -37,6 +37,16 @@ add_action( 'after_setup_theme', function() {
 	 * Lightweight accordion
 	 */
 	add_filter('lightweight_accordion_include_frontend_stylesheet', '__return_false' );
+
+	// Slim SEO remove published time from pages
+	add_filter( 'slim_seo_open_graph_tags', function( $tags ) {
+
+		if (is_page()) {
+			$tags = array_diff( $tags, ['article:published_time', 'article:modified_time'] );
+		}
+
+		return $tags;
+	} );
 	
 } );
 
